@@ -22,7 +22,7 @@ static CGFloat kPlayerToolBarHeight = 50.0;
 
 @interface JLPlayerView ()
 @property (nonatomic, assign) BOOL sliding;
-@property (nonatomic, strong) dispatch_source_t timer;
+@property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, copy) NSString * resourceUrlStr;
 @property (nonatomic, strong) MPMoviePlayerController *player;
 @property (nonatomic, weak) IBOutlet UISlider *playSlider;
@@ -36,6 +36,7 @@ static CGFloat kPlayerToolBarHeight = 50.0;
 
 @implementation JLPlayerView
 
+# pragma mark - Life Circle
 - (void)dealloc {
     
     [[NSNotificationCenter defaultCenter] removeObserver:self
@@ -54,7 +55,8 @@ static CGFloat kPlayerToolBarHeight = 50.0;
     
     [super removeFromSuperview];
     
-    dispatch_cancel(_timer);
+    [self.timer invalidate];
+    self.timer = nil;
     
 }
 
@@ -183,28 +185,19 @@ static CGFloat kPlayerToolBarHeight = 50.0;
 }
 
 /**
- *  GCD 计时器
+ *  计时器
  *
  *  @return
  */
-- (dispatch_source_t)timer {
+- (NSTimer *)timer{
     
     if (!_timer) {
-        
-        uint64_t interval = 1 * NSEC_PER_SEC;
-        dispatch_queue_t queue = dispatch_queue_create("timerQueue", 0);
-        _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
-        //使用dispatch_source_set_timer函数设置timer参数
-        dispatch_source_set_timer(_timer, dispatch_time(DISPATCH_TIME_NOW, 0), interval, 0);
-        //设置回调
-        dispatch_source_set_event_handler(_timer, ^(){
-            [self updateProgress];
-        });
-        
+        _timer=[NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(updateProgress) userInfo:nil repeats:true];
+        _timer.fireDate=[NSDate distantFuture];
     }
     
     return _timer;
-
+    
 }
 
 /**
@@ -368,11 +361,11 @@ static CGFloat kPlayerToolBarHeight = 50.0;
     switch (self.player.playbackState) {
         case MPMoviePlaybackStateStopped:case MPMoviePlaybackStatePaused:case MPMoviePlaybackStateInterrupted:
             self.playBtn.selected = NO;
-            dispatch_suspend(self.timer);
+            self.timer.fireDate=[NSDate distantFuture];
             break;
         case MPMoviePlaybackStatePlaying:
             self.playBtn.selected = YES;
-            dispatch_resume(self.timer);
+            self.timer.fireDate=[NSDate distantPast];
             break;
         default:
             break;
@@ -394,7 +387,7 @@ static CGFloat kPlayerToolBarHeight = 50.0;
         [self.playSlider setValue:progress];
     });
     
-    dispatch_suspend(self.timer);
+    self.timer.fireDate=[NSDate distantFuture];
     
 }
 
