@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B4ED947B1D71CAD200D22062 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ED947A1D71CAD200D22062 /* main.m */; };
+		B4ED947E1D71CAD200D22062 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ED947D1D71CAD200D22062 /* AppDelegate.m */; };
+		B4ED94841D71CAD200D22062 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4ED94821D71CAD200D22062 /* Main.storyboard */; };
+		B4ED94861D71CAD200D22062 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4ED94851D71CAD200D22062 /* Assets.xcassets */; };
+		B4ED94891D71CAD200D22062 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4ED94871D71CAD200D22062 /* LaunchScreen.storyboard */; };
+		B4ED94941D71CAD300D22062 /* JLPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ED94931D71CAD300D22062 /* JLPlayerTests.m */; };
+		B4ED949F1D71CAD300D22062 /* JLPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ED949E1D71CAD300D22062 /* JLPlayerUITests.m */; };
+		B4ED94EA1D71E12500D22062 /* JLPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ED94DE1D71E12500D22062 /* JLPlayerView.m */; };
+		B4ED94EB1D71E12500D22062 /* JLPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4ED94DF1D71E12500D22062 /* JLPlayerView.xib */; };
+		B4ED94EC1D71E12500D22062 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ED94E11D71E12500D22062 /* ViewController.m */; };
+		B4ED94ED1D71E12500D22062 /* sliderBlack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4ED94E31D71E12500D22062 /* sliderBlack@2x.png */; };
+		B4ED94EE1D71E12500D22062 /* sliderPot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4ED94E41D71E12500D22062 /* sliderPot@2x.png */; };
+		B4ED94EF1D71E12500D22062 /* sliderRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4ED94E51D71E12500D22062 /* sliderRed@2x.png */; };
+		B4ED94F01D71E12500D22062 /* videoMax@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4ED94E61D71E12500D22062 /* videoMax@3x.png */; };
+		B4ED94F11D71E12500D22062 /* videoMin@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4ED94E71D71E12500D22062 /* videoMin@3x.png */; };
+		B4ED94F21D71E12500D22062 /* videoPlay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4ED94E81D71E12500D22062 /* videoPlay@3x.png */; };
+		B4ED94F31D71E12500D22062 /* videoStop@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4ED94E91D71E12500D22062 /* videoStop@3x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B4ED94901D71CAD300D22062 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4ED946E1D71CAD200D22062 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4ED94751D71CAD200D22062;
+			remoteInfo = JLPlayer;
+		};
+		B4ED949B1D71CAD300D22062 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4ED946E1D71CAD200D22062 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4ED94751D71CAD200D22062;
+			remoteInfo = JLPlayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B4ED94761D71CAD200D22062 /* JLPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JLPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4ED947A1D71CAD200D22062 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B4ED947C1D71CAD200D22062 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B4ED947D1D71CAD200D22062 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B4ED94831D71CAD200D22062 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B4ED94851D71CAD200D22062 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B4ED94881D71CAD200D22062 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B4ED948A1D71CAD200D22062 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4ED948F1D71CAD300D22062 /* JLPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JLPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4ED94931D71CAD300D22062 /* JLPlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLPlayerTests.m; sourceTree = "<group>"; };
+		B4ED94951D71CAD300D22062 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4ED949A1D71CAD300D22062 /* JLPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JLPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4ED949E1D71CAD300D22062 /* JLPlayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLPlayerUITests.m; sourceTree = "<group>"; };
+		B4ED94A01D71CAD300D22062 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4ED94DD1D71E12500D22062 /* JLPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLPlayerView.h; sourceTree = "<group>"; };
+		B4ED94DE1D71E12500D22062 /* JLPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLPlayerView.m; sourceTree = "<group>"; };
+		B4ED94DF1D71E12500D22062 /* JLPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLPlayerView.xib; sourceTree = "<group>"; };
+		B4ED94E01D71E12500D22062 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B4ED94E11D71E12500D22062 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B4ED94E31D71E12500D22062 /* sliderBlack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sliderBlack@2x.png"; sourceTree = "<group>"; };
+		B4ED94E41D71E12500D22062 /* sliderPot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sliderPot@2x.png"; sourceTree = "<group>"; };
+		B4ED94E51D71E12500D22062 /* sliderRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sliderRed@2x.png"; sourceTree = "<group>"; };
+		B4ED94E61D71E12500D22062 /* videoMax@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "videoMax@3x.png"; sourceTree = "<group>"; };
+		B4ED94E71D71E12500D22062 /* videoMin@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "videoMin@3x.png"; sourceTree = "<group>"; };
+		B4ED94E81D71E12500D22062 /* videoPlay@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "videoPlay@3x.png"; sourceTree = "<group>"; };
+		B4ED94E91D71E12500D22062 /* videoStop@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "videoStop@3x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B4ED94731D71CAD200D22062 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4ED948C1D71CAD300D22062 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4ED94971D71CAD300D22062 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B4ED946D1D71CAD200D22062 = {
+			isa = PBXGroup;
+			children = (
+				B4ED94781D71CAD200D22062 /* JLPlayer */,
+				B4ED94921D71CAD300D22062 /* JLPlayerTests */,
+				B4ED949D1D71CAD300D22062 /* JLPlayerUITests */,
+				B4ED94771D71CAD200D22062 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B4ED94771D71CAD200D22062 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B4ED94761D71CAD200D22062 /* JLPlayer.app */,
+				B4ED948F1D71CAD300D22062 /* JLPlayerTests.xctest */,
+				B4ED949A1D71CAD300D22062 /* JLPlayerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B4ED94781D71CAD200D22062 /* JLPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				B4ED94DC1D71E12500D22062 /* JLPlayer */,
+				B4ED94E21D71E12500D22062 /* JLPlayerBundle */,
+				B4ED947C1D71CAD200D22062 /* AppDelegate.h */,
+				B4ED947D1D71CAD200D22062 /* AppDelegate.m */,
+				B4ED94821D71CAD200D22062 /* Main.storyboard */,
+				B4ED94851D71CAD200D22062 /* Assets.xcassets */,
+				B4ED94871D71CAD200D22062 /* LaunchScreen.storyboard */,
+				B4ED948A1D71CAD200D22062 /* Info.plist */,
+				B4ED94791D71CAD200D22062 /* Supporting Files */,
+			);
+			path = JLPlayer;
+			sourceTree = "<group>";
+		};
+		B4ED94791D71CAD200D22062 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B4ED947A1D71CAD200D22062 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B4ED94921D71CAD300D22062 /* JLPlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				B4ED94931D71CAD300D22062 /* JLPlayerTests.m */,
+				B4ED94951D71CAD300D22062 /* Info.plist */,
+			);
+			path = JLPlayerTests;
+			sourceTree = "<group>";
+		};
+		B4ED949D1D71CAD300D22062 /* JLPlayerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B4ED949E1D71CAD300D22062 /* JLPlayerUITests.m */,
+				B4ED94A01D71CAD300D22062 /* Info.plist */,
+			);
+			path = JLPlayerUITests;
+			sourceTree = "<group>";
+		};
+		B4ED94DC1D71E12500D22062 /* JLPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				B4ED94DD1D71E12500D22062 /* JLPlayerView.h */,
+				B4ED94DE1D71E12500D22062 /* JLPlayerView.m */,
+				B4ED94DF1D71E12500D22062 /* JLPlayerView.xib */,
+				B4ED94E01D71E12500D22062 /* ViewController.h */,
+				B4ED94E11D71E12500D22062 /* ViewController.m */,
+			);
+			path = JLPlayer;
+			sourceTree = "<group>";
+		};
+		B4ED94E21D71E12500D22062 /* JLPlayerBundle */ = {
+			isa = PBXGroup;
+			children = (
+				B4ED94E31D71E12500D22062 /* sliderBlack@2x.png */,
+				B4ED94E41D71E12500D22062 /* sliderPot@2x.png */,
+				B4ED94E51D71E12500D22062 /* sliderRed@2x.png */,
+				B4ED94E61D71E12500D22062 /* videoMax@3x.png */,
+				B4ED94E71D71E12500D22062 /* videoMin@3x.png */,
+				B4ED94E81D71E12500D22062 /* videoPlay@3x.png */,
+				B4ED94E91D71E12500D22062 /* videoStop@3x.png */,
+			);
+			path = JLPlayerBundle;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B4ED94751D71CAD200D22062 /* JLPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4ED94A31D71CAD300D22062 /* Build configuration list for PBXNativeTarget "JLPlayer" */;
+			buildPhases = (
+				B4ED94721D71CAD200D22062 /* Sources */,
+				B4ED94731D71CAD200D22062 /* Frameworks */,
+				B4ED94741D71CAD200D22062 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JLPlayer;
+			productName = JLPlayer;
+			productReference = B4ED94761D71CAD200D22062 /* JLPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B4ED948E1D71CAD300D22062 /* JLPlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4ED94A61D71CAD300D22062 /* Build configuration list for PBXNativeTarget "JLPlayerTests" */;
+			buildPhases = (
+				B4ED948B1D71CAD300D22062 /* Sources */,
+				B4ED948C1D71CAD300D22062 /* Frameworks */,
+				B4ED948D1D71CAD300D22062 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B4ED94911D71CAD300D22062 /* PBXTargetDependency */,
+			);
+			name = JLPlayerTests;
+			productName = JLPlayerTests;
+			productReference = B4ED948F1D71CAD300D22062 /* JLPlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B4ED94991D71CAD300D22062 /* JLPlayerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4ED94A91D71CAD300D22062 /* Build configuration list for PBXNativeTarget "JLPlayerUITests" */;
+			buildPhases = (
+				B4ED94961D71CAD300D22062 /* Sources */,
+				B4ED94971D71CAD300D22062 /* Frameworks */,
+				B4ED94981D71CAD300D22062 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B4ED949C1D71CAD300D22062 /* PBXTargetDependency */,
+			);
+			name = JLPlayerUITests;
+			productName = JLPlayerUITests;
+			productReference = B4ED949A1D71CAD300D22062 /* JLPlayerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B4ED946E1D71CAD200D22062 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = DEMO;
+				TargetAttributes = {
+					B4ED94751D71CAD200D22062 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = BMLPM3B65V;
+					};
+					B4ED948E1D71CAD300D22062 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = BMLPM3B65V;
+						TestTargetID = B4ED94751D71CAD200D22062;
+					};
+					B4ED94991D71CAD300D22062 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = BMLPM3B65V;
+						TestTargetID = B4ED94751D71CAD200D22062;
+					};
+				};
+			};
+			buildConfigurationList = B4ED94711D71CAD200D22062 /* Build configuration list for PBXProject "JLPlayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B4ED946D1D71CAD200D22062;
+			productRefGroup = B4ED94771D71CAD200D22062 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B4ED94751D71CAD200D22062 /* JLPlayer */,
+				B4ED948E1D71CAD300D22062 /* JLPlayerTests */,
+				B4ED94991D71CAD300D22062 /* JLPlayerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B4ED94741D71CAD200D22062 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4ED94891D71CAD200D22062 /* LaunchScreen.storyboard in Resources */,
+				B4ED94F31D71E12500D22062 /* videoStop@3x.png in Resources */,
+				B4ED94F21D71E12500D22062 /* videoPlay@3x.png in Resources */,
+				B4ED94EE1D71E12500D22062 /* sliderPot@2x.png in Resources */,
+				B4ED94F01D71E12500D22062 /* videoMax@3x.png in Resources */,
+				B4ED94EF1D71E12500D22062 /* sliderRed@2x.png in Resources */,
+				B4ED94ED1D71E12500D22062 /* sliderBlack@2x.png in Resources */,
+				B4ED94861D71CAD200D22062 /* Assets.xcassets in Resources */,
+				B4ED94841D71CAD200D22062 /* Main.storyboard in Resources */,
+				B4ED94EB1D71E12500D22062 /* JLPlayerView.xib in Resources */,
+				B4ED94F11D71E12500D22062 /* videoMin@3x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4ED948D1D71CAD300D22062 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4ED94981D71CAD300D22062 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B4ED94721D71CAD200D22062 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4ED947E1D71CAD200D22062 /* AppDelegate.m in Sources */,
+				B4ED947B1D71CAD200D22062 /* main.m in Sources */,
+				B4ED94EC1D71E12500D22062 /* ViewController.m in Sources */,
+				B4ED94EA1D71E12500D22062 /* JLPlayerView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4ED948B1D71CAD300D22062 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4ED94941D71CAD300D22062 /* JLPlayerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4ED94961D71CAD300D22062 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4ED949F1D71CAD300D22062 /* JLPlayerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B4ED94911D71CAD300D22062 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4ED94751D71CAD200D22062 /* JLPlayer */;
+			targetProxy = B4ED94901D71CAD300D22062 /* PBXContainerItemProxy */;
+		};
+		B4ED949C1D71CAD300D22062 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4ED94751D71CAD200D22062 /* JLPlayer */;
+			targetProxy = B4ED949B1D71CAD300D22062 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B4ED94821D71CAD200D22062 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4ED94831D71CAD200D22062 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B4ED94871D71CAD200D22062 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4ED94881D71CAD200D22062 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B4ED94A11D71CAD300D22062 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B4ED94A21D71CAD300D22062 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B4ED94A41D71CAD300D22062 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JLPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JL.JLPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B4ED94A51D71CAD300D22062 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JLPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JL.JLPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B4ED94A71D71CAD300D22062 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JLPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JL.JLPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JLPlayer.app/JLPlayer";
+			};
+			name = Debug;
+		};
+		B4ED94A81D71CAD300D22062 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JLPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JL.JLPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JLPlayer.app/JLPlayer";
+			};
+			name = Release;
+		};
+		B4ED94AA1D71CAD300D22062 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = JLPlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JL.JLPlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = JLPlayer;
+			};
+			name = Debug;
+		};
+		B4ED94AB1D71CAD300D22062 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = JLPlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JL.JLPlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = JLPlayer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B4ED94711D71CAD200D22062 /* Build configuration list for PBXProject "JLPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4ED94A11D71CAD300D22062 /* Debug */,
+				B4ED94A21D71CAD300D22062 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4ED94A31D71CAD300D22062 /* Build configuration list for PBXNativeTarget "JLPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4ED94A41D71CAD300D22062 /* Debug */,
+				B4ED94A51D71CAD300D22062 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B4ED94A61D71CAD300D22062 /* Build configuration list for PBXNativeTarget "JLPlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4ED94A71D71CAD300D22062 /* Debug */,
+				B4ED94A81D71CAD300D22062 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B4ED94A91D71CAD300D22062 /* Build configuration list for PBXNativeTarget "JLPlayerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4ED94AA1D71CAD300D22062 /* Debug */,
+				B4ED94AB1D71CAD300D22062 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B4ED946E1D71CAD200D22062 /* Project object */;
+}
