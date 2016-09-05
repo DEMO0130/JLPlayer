@@ -24,14 +24,14 @@
     
     self.playerView = ({
 //       
-        JLPlayerView * playerView = [[JLPlayerView alloc] initWithResourceUrlStr:@"http://go2study8.pinnc.com/videos/cat.mp4"
-                                                                           Frame:CGRectMake(0, 0,
-                                                                                            self.view.frame.size.width,
-                                                                                   300)];
-        
-//        JLPlayerView * playerView = [[JLPlayerView alloc] initWithFrame:CGRectMake(0, 0,
+//        JLPlayerView * playerView = [[JLPlayerView alloc] initWithResourceUrlStr:@"http://go2study8.pinnc.com/videos/cat.mp4"
+//                                                                           Frame:CGRectMake(0, 0,
 //                                                                                            self.view.frame.size.width,
 //                                                                                            300)];
+        
+        JLPlayerView * playerView = [[JLPlayerView alloc] initWithFrame:CGRectMake(0, 0,
+                                                                                   self.view.frame.size.width,
+                                                                                   300)];
         
         [self.view addSubview:playerView];
         

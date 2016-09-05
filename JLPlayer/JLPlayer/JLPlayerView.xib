@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -14,7 +14,21 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ke2-Ky-kr6">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="550"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="视频缓冲中。。。" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J06-RD-sKa">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="550"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="J06-RD-sKa" secondAttribute="trailing" id="IB3-lf-f5u"/>
+                        <constraint firstItem="J06-RD-sKa" firstAttribute="leading" secondItem="ke2-Ky-kr6" secondAttribute="leading" id="VHl-lY-iqE"/>
+                        <constraint firstItem="J06-RD-sKa" firstAttribute="top" secondItem="ke2-Ky-kr6" secondAttribute="top" id="Xft-Oh-jxf"/>
+                        <constraint firstAttribute="bottom" secondItem="J06-RD-sKa" secondAttribute="bottom" id="b9X-Z7-6eM"/>
+                    </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7g5-Qz-edw">
                     <rect key="frame" x="0.0" y="550" width="600" height="50"/>
@@ -99,6 +113,7 @@
             </constraints>
             <connections>
                 <outlet property="currentTimeLabel" destination="GfX-8e-hNB" id="XHL-VH-FDC"/>
+                <outlet property="loadingLabel" destination="J06-RD-sKa" id="q0h-Z3-Cqu"/>
                 <outlet property="playBtn" destination="mxp-HL-Zxo" id="Pyz-4o-mwF"/>
                 <outlet property="playSlider" destination="834-s5-pIm" id="p3J-sG-wSL"/>
                 <outlet property="scaleBtn" destination="huP-jO-hUB" id="cnm-aa-Voo"/>

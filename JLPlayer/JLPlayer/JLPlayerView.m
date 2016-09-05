@@ -32,6 +32,7 @@ static CGFloat kPlayerToolBarHeight = 50.0;
 @property (nonatomic, weak) IBOutlet UIButton *scaleBtn;
 @property (nonatomic, weak) IBOutlet UILabel *currentTimeLabel;
 @property (nonatomic, weak) IBOutlet UILabel *totalTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *loadingLabel;
 @end
 
 @implementation JLPlayerView
@@ -171,16 +172,24 @@ static CGFloat kPlayerToolBarHeight = 50.0;
     
     _player.contentURL = [[NSURL alloc] initWithString:_resourceUrlStr];
     
-    NSDictionary *opts = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO]
-                                                     forKey:AVURLAssetPreferPreciseDurationAndTimingKey];
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSDictionary *opts = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO]
+                                                         forKey:AVURLAssetPreferPreciseDurationAndTimingKey];
+        
+        AVURLAsset *urlAsset = [AVURLAsset URLAssetWithURL:[[NSURL alloc] initWithString:_resourceUrlStr] options:opts];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            int totalTime = (int)urlAsset.duration.value / urlAsset.duration.timescale;
+            
+            self.totalTimeLabel.text = [self timeFormatted:totalTime];
+            
+            self.playSlider.maximumValue = totalTime;
+            
+            self.loadingLabel.hidden = YES;
+        });
+        
+    });
     
-    AVURLAsset *urlAsset = [AVURLAsset URLAssetWithURL:[[NSURL alloc] initWithString:_resourceUrlStr] options:opts];
-    
-    int totalTime = (int)urlAsset.duration.value / urlAsset.duration.timescale;
-    
-    self.totalTimeLabel.text = [self timeFormatted:totalTime];
-    
-    self.playSlider.maximumValue = totalTime;
     
 }
 
